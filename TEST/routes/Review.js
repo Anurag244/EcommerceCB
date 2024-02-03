@@ -13,8 +13,8 @@ router.post('/product/:id/rating',validateReview,async(req,res)=>{
     let {id}=req.params;
 
     let product = await Product.findById(id);
-    let review = new Review({rating,comment});
-
+    let review = new Review({rating:rating,reviews:comment});
+    console.log(review)
     product.reviews.push(review);
 
     await product.save();
