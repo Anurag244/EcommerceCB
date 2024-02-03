@@ -4,7 +4,10 @@ const Product = require('./../Models/Product');
 const {validateProduct,isLoggedIn, isSeller, isProductAuthor}=require('../middleware');
 const router=express.Router();
 
-
+router.get('/',async(req,res)=>{
+    let products=await Product.find({});
+    res.render('index',{products})
+});
 
 router.get('/product',async(req,res)=>{
     let products=await Product.find({});
