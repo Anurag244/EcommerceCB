@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <% for(let item of user.cart){ %>
+     
+        <img src="<%=item.img%>" alt="">
+        
+   
+            <h5><%=item.name%></h5>
+            <p><%=item.desc%></p>
+      
+    <% } %>
+    <div>
+      <ul>
+        <% for(let item of user.cart){ %>
+        <li><span><%item.name%> --&gt;  $<%=item.price%></span></li>
+        <%}%>
+        <li>Total Amount: $<%=totalAmount%></li>
+      </ul>
+      <a href="/checkout/<%= user.id %>"><button>Checkout</button></a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<%-include('./../flash')%>
+<%-include('./../header.ejs')%>
+<%-include('./../navbar')%>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="login.css" rel="stylesheet">
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores fugit, enim odit voluptates excepturi atque eum, distinctio ipsam quaerat debitis dolore soluta laboriosam impedit molestias tenetur ducimus minima quas accusamus!</p>
+    <form action="/login" method="POST">
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username">
+        <br>
+        <label for="password">password</label>
+        <input type="password" name="password" id="password">
+        
+        <button type="submit">Login</button>
+        <p>Do not have account??..<a href="/register">Sign up</a></p>
+    </form>
+</body>
+</html>

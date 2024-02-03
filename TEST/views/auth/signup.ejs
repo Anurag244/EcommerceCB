@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/register" method="POST">
+        <label for="name">UserName</label>
+        <input type="text" name="username" id="name">
+        <br>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+        <br>
+        <label for="password">password</label>
+        <input type="password" name="password" id="pass">
+        <br>
+        <label for="gender">Gender</label>
+        <input type="password" name="gender" id="gender">
+        <br>
+        <p>want to register as buyer or seller</p>
+        <label for="role">Buyer</label>
+        <input type="radio" name="role" id="role" value="buyer">
+        <br>
+        <label for="role">seller</label>
+        <input type="radio" name="role" id="role" value="seller">
+        
+        
+        <button type="submit">SignUp</button>
+        <p>Already have an account??..<a href="/login">Login</a></p>
+    </form>
+</body>
+</html>

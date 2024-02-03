@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/product/<%=foundId._id%>?_method=PATCH" method="POST">
+        <!-- <label for="name">Username</label>
+        <input type="text" name="username" id="name"> -->
+        <div>
+        <label for="content">Name</label>
+        <input type="text" name="name" id="content" value="<%=foundId.name%>">
+        </div>
+        <!-- <label for="id">Id</label>
+        <input type="text" name="name" id="id"> -->
+        <div>
+            <label for="pic">Image: </label>
+            <input type="text" name="img" id="pic" value="<%=foundId.img%>">
+        </div>
+        <div>
+            <label for="daam">Price: </label>
+            <input type="number" name="price" id="daam" value="<%=foundId.price%>">
+        </div>
+        <div>
+            <label for="des">Description: </label>
+           <textarea name="desc" id="des" rows="3"> <%=foundId.name%> </textarea>
+        </div>
+        
+        <button type="submit">Edit comment</button>
+    </form>
+</body>
+</html>
